@@ -3,7 +3,9 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ['https://shop-haven-ecommerce-s74l.vercel.app/', 'http://localhost:5173']
+}));
 app.use(express.json());
 
 // Routes
